@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='pyanybar',
     packages=['anybar'],
-    version='0.1',
+    version='0.1.1',
     description='A python library to change the color of AnyBar',
     author='Philip Lundrigan',
     author_email='philiplundrigan@gmail.com',
