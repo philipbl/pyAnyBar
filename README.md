@@ -1,6 +1,6 @@
 # pyAnyBar
 
-A Python module for [AnyBar](https://github.com/tonsky/AnyBar)
+A Python module for [AnyBar](https://github.com/tonsky/AnyBar).
 
 ## Install
 

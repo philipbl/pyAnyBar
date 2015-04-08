@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='anybar',
+    name='pyanybar',
     packages=['anybar'],
     version='0.1',
     description='A python library to change the color of AnyBar',
