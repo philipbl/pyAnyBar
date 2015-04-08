@@ -18,7 +18,7 @@ class AnyBar():
             raise ValueError('Color is not valid. It must be one of the '
                              'following: {}'.format(', '.join(colors)))
 
-        self.socket.sendto(color, (self.address, self.port))
+        self.socket.sendto(color.encode('utf-8'), (self.address, self.port))
 
 
 if __name__ == '__main__':
