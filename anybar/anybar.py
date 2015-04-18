@@ -3,7 +3,7 @@
 import socket
 
 colors = ['white', 'red', 'orange', 'yellow', 'green', 'cyan', 'blue',
-          'purple', 'black', 'question', 'exclamation']
+          'purple', 'black', 'question', 'exclamation', 'none']
 
 
 class AnyBar():
@@ -13,12 +13,18 @@ class AnyBar():
         self.socket = socket.socket(socket.AF_INET,
                                     socket.SOCK_DGRAM)
 
-    def change(self, color):
+    def change(self, color, text=None):
         if color not in colors:
             raise ValueError('Color is not valid. It must be one of the '
                              'following: {}'.format(', '.join(colors)))
 
-        self.socket.sendto(color.encode('utf-8'), (self.address, self.port))
+        if text is None:
+            self.socket.sendto(color.encode('utf-8'),
+                               (self.address, self.port))
+        else:
+            self.socket.sendto('{} {}'.format(color, text).encode('utf-8'),
+                               (self.address, self.port))
+
 
 
 if __name__ == '__main__':
