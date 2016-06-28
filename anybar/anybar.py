@@ -22,8 +22,11 @@ class AnyBar():
             self.socket.sendto(color.encode('utf-8'),
                                (self.address, self.port))
         else:
-            self.socket.sendto('{} {}'.format(color, text).encode('utf-8'),
-                               (self.address, self.port))
+            if type(text) is unicode:
+                message = u'{} {}'.format(color, text).encode('utf-8')
+            else:
+                message = '{} {}'.format(color, text)
+            self.socket.sendto(message, (self.address, self.port))
 
 
 
