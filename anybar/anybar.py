@@ -44,4 +44,4 @@ if __name__ == '__main__':
                              '(default: localhost).')
     args = parser.parse_args()
 
-    AnyBar(port=args.port).change(args.color)
+    AnyBar(port=args.port, address=args.address).change(args.color)
