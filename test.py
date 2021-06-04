@@ -9,6 +9,7 @@ def change(color):
     ab.change(color)
     sleep(.5)
 
+change('filled')
 change('white')
 change('red')
 change('orange')
@@ -20,6 +21,7 @@ change('purple')
 change('black')
 change('question')
 change('exclamation')
+change('hollow')
 
 try:
     change('fdafsd')

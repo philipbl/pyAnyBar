@@ -3,7 +3,8 @@
 import socket
 
 colors = ['white', 'red', 'orange', 'yellow', 'green', 'cyan', 'blue',
-          'purple', 'black', 'question', 'exclamation', 'none']
+          'purple', 'black', 'question', 'exclamation', 'none', 'filled',
+          'hollow']
 
 
 class AnyBar():
